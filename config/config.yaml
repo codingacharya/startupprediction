@@ -1,0 +1,40 @@
+# ======= Model Configuration =======
+model:
+  path: models/model.pkl
+  scaler_path: models/scaler.pkl
+
+# ======= Thresholds for Success Levels =======
+thresholds:
+  high_success: 0.75      # >75% => High potential
+  moderate_success: 0.5   # 50–75% => Moderate
+  low_success: 0.3        # 30–50% => Low
+  failure: 0.3            # <30% => High failure risk
+
+# ======= Feature Categories =======
+features:
+  - basic_info
+  - team
+  - funding
+  - traction
+  - market
+  - product
+  - competition
+
+# ======= Visual Settings =======
+visualization:
+  color_palette: "Set2"
+  show_radar_chart: true
+  show_bar_chart: true
+  show_growth_curve: true
+
+# ======= PDF/Export Settings =======
+report:
+  include_charts: true
+  include_summary: true
+  default_filename: startup_success_report.pdf
+
+# ======= Logging =======
+logging:
+  level: INFO
+  log_to_file: false
+  log_file_path: logs/app.log
